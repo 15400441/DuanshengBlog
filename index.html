@@ -1,13 +1,15 @@
-﻿<!DOCTYPE html>
+﻿
+---
+title: 段生的博客
+---
 
-<html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-      <title>段生的博客</title>
-    </head>
-    <body>
+{{ page.title }}
 
-       添加内容
+{% for post in site.posts %}
 
-    </body>
-</html>
+{{ post.date|date_to_string }} <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
+
+{% endfor %}
+
+
+
